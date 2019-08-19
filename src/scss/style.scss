@@ -1,0 +1,46 @@
+@import 'variables';
+@import 'functions/mixins';
+@import 'external/normalize';
+
+//Define breakpoints + mixin to loop through breakpoints
+@import 'functions/breakpoint';
+
+//Import
+@import 'utilities/display';
+@import 'utilities/flexembed';
+@import 'utilities/font-sizes';
+@import 'utilities/hidden';
+@import 'utilities/padding-margin';
+@import 'utilities/width';
+
+h1,
+%h1 {
+  @extend %font-size-primary;
+}
+h2,
+%h2 {
+  @extend %font-size-secondary;
+}
+h3,
+%h3 {
+  @extend %font-size-tertiary;
+}
+h4,
+%h4 {
+  @extend %font-size-quaternary;
+}
+h5,
+%h5 {
+  @extend %font-size-quinary;
+}
+h6,
+%h6
+{
+  @extend %font-size-senary;
+}
+
+p,
+%p,
+a {
+  @extend %font-size-base;
+}

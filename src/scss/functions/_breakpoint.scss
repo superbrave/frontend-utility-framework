@@ -1,0 +1,49 @@
+$global-breakpoints: (
+  mobile: 0, //Is used to generate 'base classes' without responsive modifier, for example in paddings/margins
+  tablet-portrait: 600px,
+  tablet-landscape: 900px,
+  desktop: 1200px,
+  fullhd: 1800px
+);
+
+//Return null if breakpoint = mobile.
+@function breakpoint-min($name, $breakpoint: $global-breakpoints) {
+  $min: map-get($breakpoint, $name);
+  @return if($min != 0, $min, null);
+}
+
+//Get infix '-breakpointName' to use in generated utility classes like margins and paddings; none if breakpoint = 0;
+@function breakpoint-infix($name, $breakpoint: $global-breakpoints) {
+  @return if(breakpoint-min($name, $breakpoint) == null, "", "\\|#{$name}");
+}
+
+@mixin break($breakpoint-name) {
+  $breakpoint-found: false;
+  $bp: breakpoint-min($breakpoint-name, $global-breakpoints);
+
+  //Loop through the breakpoints and for each breakpoint check if the given breakpoint-name exists in the global list.
+  //If true: print the content with the media query, unless the breakpoint is mobile (print without Media Query).
+  //If false: provide warning
+  @each $breakpoint in $global-breakpoints {
+    @if (type-of($breakpoint) == "list") {
+      $name: nth($breakpoint, 1);
+      $declaration: nth($breakpoint, 2);
+
+      @if $breakpoint-name == $name and $declaration {
+        $breakpoint-found: true;
+
+        @if($bp) {
+          @media only screen and (min-width: #{$declaration}) {
+            @content;
+          }
+        } @else {
+          @content;
+        }
+      }
+    }
+  }
+
+  @if $breakpoint-found == false {
+    @error "Breakpoint ‘#{$breakpoint-name}’ does not exist";
+  }
+}

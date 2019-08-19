@@ -1,0 +1,39 @@
+//Enforces aspect ratio of embedded component
+
+$flexembed-ratios: (
+  (2:1),
+  (4:3),
+  (16:9),
+) !default;
+
+%flexembed {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  padding-bottom: 100%;
+
+  > iframe,
+  > embed,
+  > object {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@each $ratio in $flexembed-ratios {
+  @each $width, $height in $ratio {
+    @if (type-of($width) != number or type-of($height) != number) {
+      @error "`#{$width}` and `#{$height}` need to be numbers.";
+    }
+
+    %flexembed-#{$width}by#{$height} {
+      @extend %flexembed;
+      padding-bottom: ($height/$width) * 100%;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+//Element completely hidden, also for screen readers (removed from DOM)
+//As class instead of placeholder, so it is always generated and can be applied with JS
+.hidden {
+  display: none;
+}
+
+//Element hidden, but visible for screen readers.
+//As class instead of placeholder, so it is always generated and can be applied with JS
+.visually-hidden {
+  position: absolute;
+  order: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
+//Responsive class for each defined breakpoint
+@each $breakpoint in map-keys($global-breakpoints) {
+  @include break($breakpoint) {
+    $responsive-modifier: breakpoint-infix($breakpoint, $global-breakpoints);
+
+    %hidden#{$responsive-modifier} {
+      display: none;
+    }
+
+    %visually-hidden#{$responsive-modifier} {
+      position: absolute;
+      order: 0;
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+      margin: -1px;
+      padding: 0;
+      width: 1px;
+      height: 1px;
+    }
+  }
+}

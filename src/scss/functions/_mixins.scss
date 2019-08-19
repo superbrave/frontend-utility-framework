@@ -1,0 +1,41 @@
+//Converts pixel sizes to rem sizes.
+@function rem($size) {
+  $remSize: $size / $base-font-size;
+  @return #{$remSize}rem;
+}
+
+//Removes the units from any value.
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+// Updated RFS mixin:
+// - Accepts fontsize in REM
+// - Has default min/max multipliers so you can use shorthand in the selectors
+// - Max VW at fullhd(1920) instead of 1200.
+// -> We might need to tweak the multipliers.
+// If you fill in min-font-size, you also need to fill in max-font size, otherwise weird shit will happen.
+@mixin fluid-font($font-size, $min-font-size: null, $max-font-size: null, $min-vw: 320px, $max-vw: 1920px) {
+  //Automatically generate min/max if it is not provided in the function, based on font-size
+  @if($min-font-size != null && $max-font-size == null) {
+    @error('No max font-size was given.');
+  }
+
+  @if($min-font-size == null) {
+    $min-font-size: $font-size * 0.75;
+  }
+  @if($max-font-size == null) {
+    $max-font-size: $font-size * 1.25;
+  }
+
+  & {
+    font-size: $min-font-size;
+
+    @media screen and (min-width: $min-vw) {
+      font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size) * $base-font-size} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+    }
+    @media screen and (min-width: $max-vw) {
+      font-size: $max-font-size;
+    }
+  }
+}

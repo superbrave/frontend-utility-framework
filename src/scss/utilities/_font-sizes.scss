@@ -1,0 +1,17 @@
+//Set to rems
+
+$font-sizes: (
+  base: rem($base-font-size),
+  primary: rem($base-font-size * 1.5625),     //25px
+  secondary: rem($base-font-size * 1.375),    //22px
+  tertiary: rem($base-font-size * 1.125),     //18px
+  quaternary: rem($base-font-size * 1.125),   //18px
+  quinary: rem($base-font-size),              //16px
+  senary: rem($base-font-size * .875)         //14px
+) !default;
+
+@each $name, $size in $font-sizes {
+  %font-size-#{$name} {
+    font-size: $size;
+  }
+}

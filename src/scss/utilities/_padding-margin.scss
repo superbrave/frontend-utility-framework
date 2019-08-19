@@ -1,0 +1,42 @@
+//Provides a list of different sizes and generates padding and margin classes based on these sizes.
+$sizes: (
+  tiny: rem($base-font-size / 2),
+  small: rem($base-font-size),
+  medium: rem($base-font-size * 1.5),
+  large: rem($base-font-size * 2),
+  super: rem($base-font-size * 2.5),
+  huge: rem($base-font-size * 3),
+  none: 0
+);
+
+@each $breakpoint in map-keys($global-breakpoints) {
+  @include break($breakpoint) {
+    $responsive-modifier: breakpoint-infix($breakpoint, $global-breakpoints);
+
+    @each $type, $shorthand in (margin: margin, padding: padding) {
+      @each $name, $size in $sizes {
+        %#{$shorthand}-#{$name}#{$responsive-modifier} {
+          #{$type}: $size;
+        }
+
+        %#{$shorthand}-top-#{$name}#{$responsive-modifier},
+        %#{$shorthand}-vertical-#{$name}#{$responsive-modifier} {
+          #{$type}-top: $size;
+        }
+        %#{$shorthand}-bottom-#{$name}#{$responsive-modifier},
+        %#{$shorthand}-vertical-#{$name}#{$responsive-modifier} {
+          #{$type}-bottom: $size;
+        }
+
+        %#{$shorthand}-left-#{$name}#{$responsive-modifier},
+        %#{$shorthand}-horizontal-#{$name}#{$responsive-modifier} {
+          #{$type}-left: $size;
+        }
+        %#{$shorthand}-right-#{$name}#{$responsive-modifier},
+        %#{$shorthand}-horizontal-#{$name}#{$responsive-modifier} {
+          #{$type}-right: $size;
+        }
+      }
+    }
+  }
+}
