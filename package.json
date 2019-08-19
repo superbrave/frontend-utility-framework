@@ -1,0 +1,8 @@
+{
+  "name": "superbrave-utility-framework",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:superbrave/frontend-utility-framework.git",
+  "author": "Hilko Kolbeek <hk@superbrave.nl>",
+  "license": "MIT"
+}
