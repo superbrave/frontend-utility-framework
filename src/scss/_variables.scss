@@ -8,3 +8,9 @@ $color-primary: #12608c !default;
 $color-secondary: #3fa9f6 !default;
 $color-support-primary: #00c971 !default;
 
+//Buttons
+$border-radius: $base-font-size / 2 !default;
+$border-radius-cta: ($base-font-size / 2) 0 ($base-font-size / 2) 0 !default;
+
+$color-button-primary: $color-support-primary !default;
+$color-button-secondary: $color-primary !default;
