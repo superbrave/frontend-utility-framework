@@ -1,0 +1,27 @@
+//Provides a list of default hotspot sizes
+$sizes: (
+  small: rem($base-font-size * 0.5),
+  medium: rem($base-font-size),
+  large: rem($base-font-size * 2),
+);
+
+@each $breakpoint in map-keys($global-breakpoints) {
+  @include break($breakpoint) {
+    $responsive-modifier: breakpoint-infix($breakpoint, $global-breakpoints);
+    @each $name, $size in $sizes {
+      %hotspot-#{$name}#{$responsive-modifier} {
+        position: relative;
+
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: -$size;
+          left: -$size;
+          right: -$size;
+          bottom: -$size;
+        }
+      }
+    }
+  }
+}

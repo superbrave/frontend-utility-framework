@@ -1,6 +1,6 @@
 @import 'variables';
 @import 'functions/mixins';
-@import 'external/normalize';
+@import 'external/normalize-custom';
 
 //Define breakpoints + mixin to loop through breakpoints
 @import 'functions/breakpoint';
@@ -10,6 +10,7 @@
 @import 'utilities/flexembed';
 @import 'utilities/font-sizes';
 @import 'utilities/hidden';
+@import 'utilities/hotspot';
 @import 'utilities/padding-margin';
 @import 'utilities/width';
 
@@ -43,4 +44,8 @@ p,
 %p,
 a {
   @extend %font-size-base;
+}
+
+body {
+  font-family: $font-default;
 }
