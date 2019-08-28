@@ -347,3 +347,10 @@ template {
 [hidden] {
   display: none;
 }
+
+/**
+ * Custom: Fix height of svg-in-link
+ */
+a svg {
+  vertical-align: bottom;
+}
