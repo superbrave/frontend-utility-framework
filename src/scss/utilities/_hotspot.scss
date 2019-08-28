@@ -9,7 +9,7 @@ $hotspot-sizes: (
   @include break($breakpoint) {
     $responsive-modifier: breakpoint-infix($breakpoint, $global-breakpoints);
     @each $name, $size in $hotspot-sizes {
-      .hotspot-#{$name}#{$responsive-modifier} {
+      %hotspot-#{$name}#{$responsive-modifier} {
         position: relative;
 
         &:after {
