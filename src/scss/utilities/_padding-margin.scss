@@ -7,7 +7,8 @@ $sizes: (
   medium: rem($base-font-size * 1.5),
   large: rem($base-font-size * 2),
   super: rem($base-font-size * 2.5),
-  huge: rem($base-font-size * 3)
+  huge: rem($base-font-size * 3),
+  auto: auto
 );
 
 @each $breakpoint in map-keys($global-breakpoints) {
