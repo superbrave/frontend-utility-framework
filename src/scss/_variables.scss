@@ -34,6 +34,14 @@ $color-disabled: #cccccc !default;
 $color-header-background: #e0f3ff !default;
 $color-border-default: #ced4da !default;
 
+// Specific colors 
+// @todo: check if all are needed or if some can be replaced with stylguide colors
+$color-items-remaining: #979797 !default;
+$color-tooltip-icon: #e1e3eb !default;
+$color-highlight: #eff7ff !default;
+$color-border-light: #e9ecef !default;
+$color-background-light: #f9fafd !default;
+
 // Component specific settings
 //
 // Borders radius
@@ -46,7 +54,7 @@ $button-cta-border-radius: $card-border-radius !default;
 $color-button-primary: $color-primary !default;
 $color-button-primary-hover: $color-support-primary !default;
 $color-button-secondary: $color-secondary !default;
-$color-button-secondary-hover: $color-secondary-hover !default;
+$color-button-secondary-hover: #003553 !default;
 
 $color-button-success: $color-button-primary;
 $color-button-warning: $color-warning;
@@ -62,11 +70,3 @@ $color-select: $color-highlight;
 $color-scrollbar: $color-disabled;
 $color-form-error: $color-error;
 $color-card-highlight: $color-highlight;
-
-// Specific colors 
-// @todo: check if all are needed or if some can be replaced with stylguide colors
-$color-items-remaining: #979797 !default;
-$color-tooltip-icon: #e1e3eb !default;
-$color-highlight: #eff7ff !default;
-$color-border-light: #e9ecef !default;
-$color-background-light: #f9fafd !default;
