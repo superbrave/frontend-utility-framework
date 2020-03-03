@@ -3,20 +3,51 @@ $base-font-size: 16 !default; //pixels that is.
 $font-default: proxima-nova, sans-serif !default;
 $font-headers: proxima-nova, sans-serif !default;
 
-//Base colors
+// Base colors
+// 1. Global colors
+$color-global-light: #ffffff !default;
+$color-global-dark: #2e2e2e !default;
+$color-success: #009c58 !default;
+$color-error: #b32d3a !default;
+$color-disabled: #cccccc !default;
+
+// 2. Styleguide colors: Default state
 $color-primary: #12608c !default;
 $color-secondary: #3fa9f6 !default;
 $color-support-primary: #00c971 !default;
 
-$color-global-light: #ffffff !default;
-$color-global-dark: #2e2e2e !default;
+// 3. Hover state
+$color-primary-hover: #003553 !default;
+$color-support-primary-hover: #009956 !default;
 
-//Buttons
+// 4. Font colors
+$color-font-base: $color-global-dark;
+$color-disabled-font: #909090 !default;
+$color-text-header: #65686a !default;
+$color-items-remaining: #979797 !default;
+$color-tooltip-icon: #e1e3eb !default;
+
+// Borders
+// 1. Radius
+$card-border-radius: .5rem 0 .5rem 0 !default;
+$tabs-border-radius: .25rem .25rem 0 0 !default;
 $button-border-radius: $base-font-size / 2 !default;
-$button-cta-border-radius: ($base-font-size / 2) 0 ($base-font-size / 2) 0 !default;
+$button-cta-border-radius: $card-border-radius !default;
+// 2. Colors
+$color-border-default: #ced4da !default;
+$color-border-light: #e9ecef !default;
 
+// Buttons
 $color-button-primary: $color-support-primary !default;
 $color-button-secondary: $color-primary !default;
+$color-button-secondary-hover: $color-primary-hover !default;
+$color-button-success: $color-success;
+$color-button-warning: #ffc108;
+$color-button-danger: #b32d3a;
 
-//Font
-$color-font-base: $color-global-dark;
+// Tables / Lists headers
+$color-table-header: #eff7ff !default;
+$color-table-header-font: #878f97 !default;
+
+// Misc.
+$color-scrollbar: #cccccc !default;

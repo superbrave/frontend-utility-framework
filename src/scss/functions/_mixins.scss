@@ -17,7 +17,7 @@
 // If you fill in min-font-size, you also need to fill in max-font size, otherwise weird shit will happen.
 @mixin fluid-font($font-size, $min-font-size: null, $max-font-size: null, $min-vw: 320px, $max-vw: 1920px) {
   //Automatically generate min/max if it is not provided in the function, based on font-size
-  @if($min-font-size != null && $max-font-size == null) {
+  @if($min-font-size != null and $max-font-size == null) {
     @error('No max font-size was given.');
   }
 
