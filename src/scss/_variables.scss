@@ -3,51 +3,70 @@ $base-font-size: 16 !default; //pixels that is.
 $font-default: proxima-nova, sans-serif !default;
 $font-headers: proxima-nova, sans-serif !default;
 
-// Base colors
-// 1. Global colors
-$color-global-light: #ffffff !default;
-$color-global-dark: #2e2e2e !default;
-$color-success: #009c58 !default;
-$color-error: #b32d3a !default;
-$color-disabled: #cccccc !default;
+// Styleguide colors
+//
+//  1a. Primary colors
+$color-primary: #00c971 !default;
+$color-secondary: #12608c !default;
+$color-support-primary: #009c56 !default;
+$color-support-secondary: #3fa9f6 !default;
 
-// 2. Styleguide colors: Default state
-$color-primary: #12608c !default;
-$color-secondary: #3fa9f6 !default;
-$color-support-primary: #00c971 !default;
-
-// 3. Hover state
+//  1b. Primary colors hover states
 $color-primary-hover: #003553 !default;
 $color-support-primary-hover: #009956 !default;
 
-// 4. Font colors
+//  2. Text colors
+$color-global-light: #ffffff !default;
+$color-global-dark: #2e2e2e !default;
+
 $color-font-base: $color-global-dark;
 $color-disabled-font: #909090 !default;
 $color-text-header: #65686a !default;
-$color-items-remaining: #979797 !default;
-$color-tooltip-icon: #e1e3eb !default;
 
-// Borders
-// 1. Radius
+//  3. Notification colors
+$color-error: #b32d3a !default;
+$color-error-hover: #9a2631 !default;
+$color-warning: #ffc107 !default;
+$color-success: $color-support-primary;
+
+//  4. Miscellaneous colors
+$color-disabled: #cccccc !default;
+$color-header-background: #e0f3ff !default;
+$color-border-default: #ced4da !default;
+
+// Component specific settings
+//
+// Borders radius
 $card-border-radius: .5rem 0 .5rem 0 !default;
 $tabs-border-radius: .25rem .25rem 0 0 !default;
 $button-border-radius: $base-font-size / 2 !default;
 $button-cta-border-radius: $card-border-radius !default;
-// 2. Colors
-$color-border-default: #ced4da !default;
-$color-border-light: #e9ecef !default;
 
 // Buttons
-$color-button-primary: $color-support-primary !default;
-$color-button-secondary: $color-primary !default;
-$color-button-secondary-hover: $color-primary-hover !default;
-$color-button-success: $color-success;
-$color-button-warning: #ffc108;
-$color-button-danger: #b32d3a;
+$color-button-primary: $color-primary !default;
+$color-button-primary-hover: $color-support-primary !default;
+$color-button-secondary: $color-secondary !default;
+$color-button-secondary-hover: $color-secondary-hover !default;
+
+$color-button-success: $color-button-primary;
+$color-button-warning: $color-warning;
+$color-button-danger: $color-error;
 
 // Tables / Lists headers
-$color-table-header: #eff7ff !default;
+$color-table-header: $color-highlight;
 $color-table-header-font: #878f97 !default;
+$color-label: #878f97 !default; //same as table-header-font.
+$color-select: $color-highlight;
 
 // Misc.
-$color-scrollbar: #cccccc !default;
+$color-scrollbar: $color-disabled;
+$color-form-error: $color-error;
+$color-card-highlight: $color-highlight;
+
+// Specific colors 
+// @todo: check if all are needed or if some can be replaced with stylguide colors
+$color-items-remaining: #979797 !default;
+$color-tooltip-icon: #e1e3eb !default;
+$color-highlight: #eff7ff !default;
+$color-border-light: #e9ecef !default;
+$color-background-light: #f9fafd !default;

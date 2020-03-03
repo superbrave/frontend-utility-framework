@@ -1,0 +1,14 @@
+// CSS contain property to provide layout containment
+// More information https://www.smashingmagazine.com/2019/12/browsers-containment-css-contain-property/
+
+%contain-layout {
+    contain: layout;
+}
+
+%contain-size {
+    contain: size;
+}
+
+%contain-paint {
+    contain: paint;
+}
