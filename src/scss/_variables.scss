@@ -6,14 +6,13 @@ $font-headers: proxima-nova, sans-serif !default;
 // Styleguide colors
 //
 //  1a. Primary colors
-$color-primary: #00c971 !default;
-$color-secondary: #12608c !default;
-$color-support-primary: #009c56 !default;
-$color-support-secondary: #3fa9f6 !default;
+$color-primary: #12608c !default;
+$color-secondary: #3fa9f6 !default;
+$color-support-primary: #00c971 !default;
+$color-support-secondary: #003553 !default;
 
 //  1b. Primary colors hover states
-$color-primary-hover: #003553 !default;
-$color-support-primary-hover: #009956 !default;
+$color-primary-hover: $color-support-secondary !default;
 
 //  2. Text colors
 $color-global-light: #ffffff !default;
@@ -27,7 +26,7 @@ $color-text-header: #65686a !default;
 $color-error: #b32d3a !default;
 $color-error-hover: #9a2631 !default;
 $color-warning: #ffc107 !default;
-$color-success: $color-support-primary;
+$color-success: #009c56 !default;
 
 //  4. Miscellaneous colors
 $color-disabled: #cccccc !default;
@@ -51,12 +50,12 @@ $button-border-radius: $base-font-size / 2 !default;
 $button-cta-border-radius: $card-border-radius !default;
 
 // Buttons
-$color-button-primary: $color-primary !default;
-$color-button-primary-hover: $color-support-primary !default;
-$color-button-secondary: $color-secondary !default;
-$color-button-secondary-hover: #003553 !default;
+$color-button-primary: $color-support-primary !default;
+$color-button-primary-hover: $color-success !default;
+$color-button-secondary: $color-primary !default;
+$color-button-secondary-hover: $color-support-secondary !default;
 
-$color-button-success: $color-button-primary;
+$color-button-success: $color-success;
 $color-button-warning: $color-warning;
 $color-button-danger: $color-error;
 
