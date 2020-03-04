@@ -17,10 +17,7 @@ $color-primary-hover: $color-support-secondary !default;
 //  2. Text colors
 $color-global-light: #ffffff !default;
 $color-global-dark: #2e2e2e !default;
-
 $color-font-base: $color-global-dark;
-$color-disabled-font: #909090 !default;
-$color-text-header: #65686a !default;
 
 //  3. Notification colors
 $color-error: #b32d3a !default;
@@ -30,16 +27,19 @@ $color-success: #009c56 !default;
 
 //  4. Miscellaneous colors
 $color-disabled: #cccccc !default;
-$color-header-background: #e0f3ff !default;
+$color-highlight: #eff7ff !default;
 $color-border-default: #ced4da !default;
 
 // Specific colors 
 // @todo: check if all are needed or if some can be replaced with stylguide colors
+$color-disabled-font: #909090 !default;
+$color-text-header: #65686a !default;
+
 $color-items-remaining: #979797 !default;
 $color-tooltip-icon: #e1e3eb !default;
-$color-highlight: #eff7ff !default;
 $color-border-light: #e9ecef !default;
 $color-background-light: #f9fafd !default;
+$color-label: #65686a !default;
 
 // Component specific settings
 //
@@ -61,8 +61,7 @@ $color-button-danger: $color-error;
 
 // Tables / Lists headers
 $color-table-header: $color-highlight;
-$color-table-header-font: #878f97 !default;
-$color-label: #878f97 !default; //same as table-header-font.
+$color-table-header-font: $color-label !default;
 $color-select: $color-highlight;
 
 // Misc.
