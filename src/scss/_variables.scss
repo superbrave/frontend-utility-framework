@@ -14,34 +14,30 @@ $color-support-secondary: #003553 !default;
 //  1b. Primary colors hover states
 $color-primary-hover: $color-support-secondary !default;
 
-//  2. Text colors
-$color-global-light: #ffffff !default;
-$color-global-dark: #2e2e2e !default;
-$color-font-base: $color-global-dark;
-
-//  3. Notification colors
+//  2a. Notification colors
 $color-error: #b32d3a !default;
-$color-error-hover: #9a2631 !default;
 $color-warning: #ffc107 !default;
 $color-success: #009c56 !default;
 
+//  2b. Notification colors hover states
+$color-error-hover: #9a2631 !default;
+
+//  3. Text colors
+$color-global-light: #ffffff !default;
+$color-global-halftone: #65686a !default;
+$color-global-dark: #2e2e2e !default;
+$color-label-font: #878f97 !default;
+$color-disabled-font: #909090 !default;
+
 //  4. Miscellaneous colors
 $color-disabled: #cccccc !default;
-$color-highlight: #eff7ff !default;
 $color-border-default: #ced4da !default;
-
-// Specific colors 
-// @todo: check if all are needed or if some can be replaced with stylguide colors
-$color-disabled-font: #909090 !default;
-$color-text-header: #65686a !default;
-
-$color-items-remaining: #979797 !default;
-$color-tooltip-icon: #e1e3eb !default;
-$color-border-light: #e9ecef !default;
+$color-highlight: #eff7ff !default;
+$color-scrollbar: $color-disabled;
+$color-scrollbar-background: #e9ecef;
 $color-background-light: #f9fafd !default;
-$color-label: #65686a !default;
 
-// Component specific settings
+// Other settings
 //
 // Borders radius
 $card-border-radius: .5rem 0 .5rem 0 !default;
@@ -55,16 +51,8 @@ $color-button-primary-hover: $color-success !default;
 $color-button-secondary: $color-primary !default;
 $color-button-secondary-hover: $color-support-secondary !default;
 
-$color-button-success: $color-success;
-$color-button-warning: $color-warning;
-$color-button-danger: $color-error;
-
 // Tables / Lists headers
 $color-table-header: $color-highlight;
-$color-table-header-font: $color-label !default;
-$color-select: $color-highlight;
 
 // Misc.
-$color-scrollbar: $color-disabled;
-$color-form-error: $color-error;
-$color-card-highlight: $color-highlight;
+$color-font-base: $color-global-dark;
