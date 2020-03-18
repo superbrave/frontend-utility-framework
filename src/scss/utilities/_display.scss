@@ -4,7 +4,7 @@
   @include break($breakpoint) {
     $responsive-modifier: breakpoint-infix($breakpoint, $global-breakpoints);
 
-    @each $type in (block, inline-block, inline, flex, inline-flex, grid) {
+    @each $type in (none, block, inline-block, inline, flex, inline-flex, grid) {
       %#{$type}#{$responsive-modifier} {
         display: $type;
       }
