@@ -4,7 +4,7 @@ $global-breakpoints: (
   tablet-landscape: 900px,
   desktop: 1200px,
   fullhd: 1800px
-);
+) !default;
 
 //Return null if breakpoint = mobile.
 @function breakpoint-min($name, $breakpoint: $global-breakpoints) {
