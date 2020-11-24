@@ -1,7 +1,7 @@
 $base-font-size: 16 !default; //pixels that is.
 
-$font-default: proxima-nova, sans-serif !default;
-$font-headers: proxima-nova, sans-serif !default;
+$font-default: montserrat, sans-serif !default;
+$font-headers: montserrat, sans-serif !default;
 
 // Styleguide colors
 //
@@ -56,3 +56,14 @@ $color-table-header: $color-highlight;
 
 // Misc.
 $color-font-base: $color-global-dark;
+
+// Font sizes
+$font-sizes: (
+  base: rem($base-font-size),
+  first: rem($base-font-size * 3.1255), //50px
+  second: rem($base-font-size * 2.125), //34px
+  third: rem($base-font-size * 2), //32px
+  fourth: rem($base-font-size * 1.625), //26px
+  fifth: rem($base-font-size * 1.375), //22px
+  sixth: rem($base-font-size * 0.875) //14px
+) !default;
