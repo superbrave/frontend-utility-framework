@@ -1,0 +1,57 @@
+// Alignment mixin (grid+flex)
+$flex: (
+  align-self: auto flex-start flex-end center baseline stretch,
+  align-items: stretch center baseline start end,
+  align-content: center space-between space-around space-evenly flex-start
+    flex-end,
+  justify-content: center space-between space-around space-evenly flex-start
+    flex-end,
+);
+
+$grid: (
+  self: start center end stretch,
+  items: start center end stretch,
+);
+
+@each $breakpoint in map-keys($global-breakpoints) {
+  @include break($breakpoint) {
+    $responsive-modifier: breakpoint-infix($breakpoint, $global-breakpoints);
+
+    @each $type, $shorthand in (grid: grid, flex: flex) {
+      // grid-align-self-start (x,y)
+      // grid-align-self-start\|tablet-portrait (x,y)
+      // grid-align-self-horizontal-start (x)
+      // grid-align-self-horizontal-start\|tablet-portrait (x)
+      // grid-align-items-vertical-center (y)
+      // grid-align-items-vertical-center\|tablet-portrait (y)
+      @if $shorthand == 'grid' {
+        @each $property, $values in $grid {
+          @each $value in $values {
+            %#{$shorthand}-align-#{$property}-#{$value}#{$responsive-modifier} {
+              place-#{$property}: $value;
+            }
+
+            %#{$shorthand}-align-#{$property}-horizontal-#{$value}#{$responsive-modifier} {
+              justify-#{$property}: $value;
+            }
+
+            %#{$shorthand}-align-#{$property}-vertical-#{$value}#{$responsive-modifier} {
+              align-#{$property}: $value;
+            }
+          }
+        }
+      }
+
+      @if $shorthand == 'flex' {
+        // We don't use fancy horizontal / vertical names because flexbox is more complex
+        @each $property, $values in $flex {
+          @each $value in $values {
+            %#{$shorthand}-#{$property}-#{$value}#{$responsive-modifier} {
+              #{$property}: $value;
+            }
+          }
+        }
+      }
+    }
+  }
+}
