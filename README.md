@@ -131,3 +131,12 @@ Usage: `@extend width-2of5|desktop` will generate:
   width: 40%;
 }
 ```
+
+
+
+## Want to make changes?
+
+1. Run `npm install`
+3. If you haven't done so, copy .env file: `$ cp .env.dist .env`
+4. Create a personal access token in Github and paste token in `GITHUB_TOKEN` variable in `.env` file
+5. Release your version: `$ npm run release` and follow prompt
