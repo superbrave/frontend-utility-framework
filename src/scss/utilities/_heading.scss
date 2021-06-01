@@ -1,0 +1,19 @@
+//Set default Headers as extends for components
+%h1 {
+  @extend %font-size-fourth;
+  @extend %font-size-third\|tablet-portrait;
+  @extend %font-size-first\|tablet-landscape;
+}
+
+%h2 {
+  @extend %font-size-fifth;
+  @extend %font-size-second\|tablet-landscape;
+}
+%h3 {
+  @extend %font-size-sixth;
+  @extend %font-size-fifth\|tablet-landscape;
+}
+%h4 {
+  @extend %font-size-base;
+  @extend %font-size-sixth\|tablet-landscape;
+}
