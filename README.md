@@ -9,13 +9,13 @@ This framework does not try to compete with renowned frameworks like Bootstrap o
 Use the following command to include the build script in your project.
 
 ```
-yarn add superbrave-utility-framework
+yarn add @superbrave/utility-framework
 ```
 
 Or if you are using NPM:
 
 ```
-npm i superbrave-utility-framework
+npm i @superbrave/utility-framework
 ```
 
 ## 3. The framework
@@ -33,7 +33,7 @@ The mixin loops through the list and places a media query around the content pas
 
 For example:
 
-```css
+```scss
 @include break(desktop) {
   display: none;
 }
@@ -41,7 +41,7 @@ For example:
 
 will generate:
 
-```css
+```scss
 @media only screen and (min-width: 1200px) {
   display: none;
 }
@@ -71,6 +71,7 @@ If `$min-font-size` and `$max-font-size` are provided, the font will scale betwe
 ### Utilities
 
 The utilities generate helper placeholders with default css rules applied to them. They can be applied to an element by using the SASS `@extend` directive.
+
 
 #### Display
 
@@ -125,7 +126,7 @@ The fractions _x_ of5 will generate widths of 20% per fraction; _x_ of 4 widths 
 
 Usage: `@extend width-2of5|desktop` will generate:
 
-```css
+```scss
 @media only screen and (min-width: 1200px) {
   width: 40%;
 }
