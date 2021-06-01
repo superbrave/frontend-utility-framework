@@ -1,0 +1,20 @@
+// Add a negative wrapper to create wider components
+
+%negative-wrapper {
+    margin-left: rem($base-font-size * -1);
+    margin-right: rem($base-font-size * -1);
+  }
+  
+  %negative-wrapper\|tablet-landscape {
+    @include break(tablet-landscape) {
+      margin-left: rem($base-font-size * -1);
+      margin-right: rem($base-font-size * -1);
+    }
+  }
+  
+  %negative-wrapper-none\|tablet-landscape {
+    @include break(tablet-landscape) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
