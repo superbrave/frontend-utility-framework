@@ -1,10 +1,14 @@
+// Umport the math so we can use devisions
+@use "sass:math";
+
+// Load all global settings
 @import 'variables';
 @import 'functions/mixins';
 
-//Define breakpoints + mixin to loop through breakpoints
+// Define breakpoints + mixin to loop through breakpoints
 @import 'functions/breakpoint';
 
-//Import
+// Import
 @import 'utilities/contain';
 @import 'utilities/display';
 @import 'utilities/fade-in-out';

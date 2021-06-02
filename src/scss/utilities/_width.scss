@@ -12,7 +12,7 @@ $fractions: 5 !default;
       @for $numerator from 1 through $denominator {
         %width-#{$numerator}of#{$denominator}#{$breakpoint} {
           flex-basis: auto;
-          width: percentage($numerator / $denominator);
+          width: percentage(math.div($numerator, $denominator));
         }
       }
     }

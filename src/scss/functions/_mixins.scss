@@ -1,12 +1,12 @@
 //Converts pixel sizes to rem sizes.
 @function rem($size) {
-  $remSize: strip-unit($size) / $base-font-size;
+  $remSize: math.div(strip-unit($size), $base-font-size);
   @return #{$remSize}rem;
 }
 
 //Removes the units from any value.
 @function strip-unit($value) {
-  @return $value / ($value * 0 + 1);
+  @return math.div($value, ($value * 0 + 1));
 }
 
 // Updated RFS mixin:
@@ -32,7 +32,7 @@
     font-size: $min-font-size;
 
     @media screen and (min-width: $min-vw) {
-      font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size) * $base-font-size} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size) * $base-font-size} * math.div((100vw - #{$min-vw}), #{strip-unit($max-vw - $min-vw)}));
     }
     @media screen and (min-width: $max-vw) {
       font-size: $max-font-size;
