@@ -1,3 +1,12 @@
+### [0.2.1](https://github.com/superbrave/frontend-utility-framework/compare/0.2.0...0.2.1) (2021-06-03)
+
+
+### Bugfixes
+
+* **SASS:** Added container te style scss ([6fcf04c](https://github.com/superbrave/frontend-utility-framework/commit/6fcf04c9fae28974266201ddd7e1f3d68f1b56e1))
+* **SASS:** Correct support colors ([478e9aa](https://github.com/superbrave/frontend-utility-framework/commit/478e9aa6b84256938184ed32a12aadea259b90dd))
+* **SASS:** Re-added container placeholder ([3169523](https://github.com/superbrave/frontend-utility-framework/commit/31695230c04d6e9706290ca6fad21d6f2aeadba3))
+
 ## [0.2.0](https://github.com/superbrave/frontend-utility-framework/compare/0.1.0...0.2.0) (2021-06-03)
 
 
