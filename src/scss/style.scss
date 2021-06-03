@@ -4,6 +4,7 @@
 // Load all global settings
 @import 'variables';
 @import 'functions/mixins';
+@import 'functions/functions';
 
 // Define breakpoints + mixin to loop through breakpoints
 @import 'functions/breakpoint';

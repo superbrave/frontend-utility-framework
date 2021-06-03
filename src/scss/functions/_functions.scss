@@ -1,0 +1,39 @@
+// Gets the specific color's css variable from the name and variation. Variant/alpha are optional
+// --------------------------------------------------------------------------------------------
+// Example usage:
+// theme-color(primary) => var(--sb-color-primary)
+// theme-color(secondary, contrast) => var(--sb-color-secondary-contrast)
+// theme-color(primary, base, 0.5) => rgba(var(--sb-color-primary-rgb), 0.5)
+// --------------------------------------------------------------------------------------------
+@function theme-color($name, $variant: base, $alpha: null) {
+    $color-var: --sb-color-#{$name}-#{$variant};
+
+    @if ($variant == base) {
+        $color-var: --sb-color-#{$name};
+
+        // Alpha can only be used with base variant
+        @if ($alpha) {
+            @return rgba(var(#{$color-var}-rgb), $alpha);
+        }
+    }
+
+    @return var(#{$color-var});
+}
+
+// Mixes a color with black to create its shade.
+// --------------------------------------------------------------------------------------------
+@function get-color-shade($color) {
+    @return mix(#000, $color, 12%);
+}
+
+// Mixes a color with white to create its tint.
+// --------------------------------------------------------------------------------------------
+@function get-color-tint($color) {
+    @return mix(#fff, $color, 10%);
+}
+
+// Converts a color to a comma separated rgb.
+// --------------------------------------------------------------------------------------------
+@function color-to-rgb-list($color) {
+    @return #{red($color)}, #{green($color)}, #{blue($color)};
+}

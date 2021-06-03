@@ -39,3 +39,41 @@
     }
   }
 }
+
+// Generate all color names
+@mixin generate-color($color-name) {
+  $value: map-get($app-colors, $color-name);
+
+  $base: map-get($value, base);
+  $contrast: map-get($value, contrast);
+  $shade: map-get($value, shade);
+  $tint: map-get($value, tint);
+
+  /** #{$color-name} **/
+  --sb-color-#{$color-name}: #{$base};
+  --sb-color-#{$color-name}-rgb: #{color-to-rgb-list($base)};
+  --sb-color-#{$color-name}-contrast: #{$contrast};
+  --sb-color-#{$color-name}-contrast-rgb: #{color-to-rgb-list($contrast)};
+  --sb-color-#{$color-name}-shade: #{$shade};
+  --sb-color-#{$color-name}-tint: #{$tint};
+}
+
+@mixin generate-helper-color($color-name) {
+  $value: map-get($app-colors, $color-name);
+
+  $base: map-get($value, base);
+  $contrast: map-get($value, contrast);
+  $shade: map-get($value, shade);
+  $tint: map-get($value, tint);
+
+  /** #{$color-name} **/
+  --sb-color-base: #{$base};
+  --sb-color-rgb: #{color-to-rgb-list($base)};
+  --sb-color-contrast: #{$contrast};
+  --sb-color-contrast-rgb: #{color-to-rgb-list($contrast)};
+  --sb-color-shade: #{$shade};
+  --sb-color-tint: #{$tint};
+
+  // TODO: rm support for default color in future
+  color: theme-color($color-name);
+}
