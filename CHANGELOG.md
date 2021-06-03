@@ -1,3 +1,15 @@
+## [0.2.0](https://github.com/superbrave/frontend-utility-framework/compare/0.1.0...0.2.0) (2021-06-03)
+
+
+### Features
+
+* **SASS:** New functions and mixins for colors ([1084f4f](https://github.com/superbrave/frontend-utility-framework/commit/1084f4fe59be33cafbbfcacff1cea768296eb531))
+
+
+### Bugfixes
+
+* **SASS:** Typo ([bf2f540](https://github.com/superbrave/frontend-utility-framework/commit/bf2f5401389d14659a9e2c7b1b5465b0de56b9bf))
+
 ## [0.1.0](https://github.com/superbrave/frontend-utility-framework/compare/0.0.23...0.1.0) (2021-06-01)
 
 
