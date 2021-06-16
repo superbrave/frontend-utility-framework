@@ -5,6 +5,7 @@
 
   width: 100%;
   max-width: $container-width-tablet;
+  box-sizing: border-box;
 
   @include break(tablet-landscape) {
     max-width: $container-width-tablet-landscape;
