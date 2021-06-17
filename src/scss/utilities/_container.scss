@@ -1,13 +1,11 @@
 %container {
-  @extend %padding-left-base;
-  @extend %padding-right-base;
-  @extend %padding-left-none\|tablet-landscape;
-  @extend %padding-right-none\|tablet-landscape;
+  @extend %padding-horizontal-base;
+  @extend %padding-horizontal-none\|tablet-landscape;
+  @extend %margin-horizontal-auto;
 
   width: 100%;
   max-width: $container-width-tablet;
-  margin-left: auto;
-  margin-right: auto;
+  box-sizing: border-box;
 
   @include break(tablet-landscape) {
     max-width: $container-width-tablet-landscape;
