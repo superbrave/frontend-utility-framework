@@ -1,3 +1,15 @@
+## [0.3.0](https://github.com/superbrave/frontend-utility-framework/compare/0.2.1...0.3.0) (2021-06-17)
+
+
+### Features
+
+* **Variables:** Added border light color ([a4ec902](https://github.com/superbrave/frontend-utility-framework/commit/a4ec9021cbc0e101580762daf48c0d5ad4784519))
+
+
+### Bugfixes
+
+* **Container:** Added box sizing ([3720ae9](https://github.com/superbrave/frontend-utility-framework/commit/3720ae905255f8c67374780ac6f7b6941dcbe6fc))
+
 ### [0.2.1](https://github.com/superbrave/frontend-utility-framework/compare/0.2.0...0.2.1) (2021-06-03)
 
 
