@@ -1,7 +1,7 @@
 $global-breakpoints: (
   mobile: 0, //Is used to generate 'base classes' without responsive modifier, for example in paddings/margins
   tablet-portrait: 600px,
-  tablet-landscape: 900px,
+  tablet-landscape: 990px,
   desktop: 1200px,
   fullhd: 1800px
 ) !default;
