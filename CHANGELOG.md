@@ -1,3 +1,17 @@
+### [0.3.1](https://github.com/superbrave/frontend-utility-framework/compare/0.3.0...0.3.1) (2021-07-29)
+
+
+### Bugfixes
+
+* updated breakpoint for tablet portrait ([7a70fd0](https://github.com/superbrave/frontend-utility-framework/commit/7a70fd016306ea9802dc240669cc0f2d33a1b705))
+
+### [0.3.1](https://github.com/superbrave/frontend-utility-framework/compare/0.3.0...0.3.1) (2021-07-29)
+
+
+### Bugfixes
+
+* updated breakpoint for tablet portrait ([7a70fd0](https://github.com/superbrave/frontend-utility-framework/commit/7a70fd016306ea9802dc240669cc0f2d33a1b705))
+
 ## [0.3.0](https://github.com/superbrave/frontend-utility-framework/compare/0.2.1...0.3.0) (2021-06-17)
 
 
