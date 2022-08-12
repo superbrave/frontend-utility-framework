@@ -55,7 +55,14 @@ The default infix is \|. Because the pipe character is used in CSS to define nam
 
 Usage: 
 ```scss
-@extend [utility]\|[breakpoint-name];
+@extend %[utility]\|[breakpoint-name];
+
+/** 
+Example:
+This hides the element on mobile but adds `display:flex;` from the tablet-landscape media query
+*/
+@extend %none;
+@extend %flex\|tablet-landscape;
 ```
 
 ### \_mixins.scss
@@ -84,10 +91,10 @@ Note: `display:none` is generated in the hidden-utility.
 
 Usage: 
 ```scss
-@extend [display-type]\|[responsive-modifier];
+@extend %[display-type]\|[responsive-modifier];
 
 /* Example */
-@extend block\|desktop;
+@extend %block\|desktop;
 ```
 
 ### Flexembed
@@ -107,7 +114,7 @@ Note: This variable cannot be overwritten
 
 Usage: 
 ```scss
-@extend font-size-primary;
+@extend %font-size-primary;
 ```
 
 ### Hidden
@@ -116,8 +123,8 @@ Generates helper classes to hide elements from display on the page. This can be 
 
 Usage: 
 ```scss
-@extend hidden\|[responsive-modifier];
-@extend visually-hidden\|[responsive-modifier];
+@extend %hidden\|[responsive-modifier];
+@extend %visually-hidden\|[responsive-modifier];
 ```
 
 ### Paddings & Margins
@@ -130,11 +137,11 @@ Both paddings and margins can be applied to any one side (top, left, bottom, rig
 
 Usage: 
 ```scss
-@extend [padding-where-size]\|[responsive-modifier];
-@extend [margin-where-size]\|[responsive-modifier];
+@extend %[padding-where-size]\|[responsive-modifier];
+@extend %[margin-where-size]\|[responsive-modifier];
 
 /* Example */
-@extend padding-vertical-tiny\|tablet-portrait;
+@extend %padding-vertical-tiny\|tablet-portrait;
 ```
 
 ### Width
@@ -149,7 +156,7 @@ The fractions _x_ of5 will generate widths of 20% per fraction; _x_ of 4 widths 
 
 Usage: 
 ```scss
-@extend width-2of5|desktop;
+@extend %width-2of5|desktop;
 ``` 
 
 will generate:
