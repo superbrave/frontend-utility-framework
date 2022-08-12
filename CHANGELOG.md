@@ -1,3 +1,5 @@
+### [0.4.2](https://github.com/superbrave/frontend-utility-framework/compare/0.4.1...0.4.2) (2022-08-12)
+
 ### [0.4.1](https://github.com/superbrave/frontend-utility-framework/compare/0.4.0...0.4.1) (2022-08-11)
 
 ## [0.4.0](https://github.com/superbrave/frontend-utility-framework/compare/0.3.1...0.4.0) (2021-08-27)
