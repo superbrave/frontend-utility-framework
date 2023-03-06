@@ -156,7 +156,7 @@ The fractions _x_ of5 will generate widths of 20% per fraction; _x_ of 4 widths 
 
 Usage: 
 ```scss
-@extend %width-2of5|desktop;
+@extend %width-2of5\|desktop;
 ``` 
 
 will generate:
